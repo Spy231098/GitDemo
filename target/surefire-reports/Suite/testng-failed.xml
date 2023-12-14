@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="methods" name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="pavanacademy.TestComponents.Listeners"/>
+  </listeners>
+  <test thread-count="5" parallel="methods" name="Submit Order(failed)" verbose="0">
+    <classes>
+      <class name="pavanacademy.tests.SubmitOrder">
+        <methods>
+          <include name="tearDown"/>
+          <include name="launcApplication"/>
+          <include name="submitOrder" invocation-numbers="0 1"/>
+          <include name="OrderCheck"/>
+        </methods>
+      </class> <!-- pavanacademy.tests.SubmitOrder -->
+    </classes>
+  </test> <!-- Submit Order(failed) -->
+  <test thread-count="5" parallel="methods" name="Error Validation(failed)" verbose="0">
+    <classes>
+      <class name="pavanacademy.tests.ErrorValidation">
+        <methods>
+          <include name="LogInValidation"/>
+          <include name="launcApplication"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- pavanacademy.tests.ErrorValidation -->
+    </classes>
+  </test> <!-- Error Validation(failed) -->
+</suite> <!-- Failed suite [Suite] -->
