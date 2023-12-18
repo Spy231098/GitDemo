@@ -55,6 +55,8 @@ public class StandAlone2 {
 		confirmMessage.equalsIgnoreCase("THANKYOU FOR THE ORDER.");
 		String orderID = driver.findElement(By.cssSelector(".box .ng-star-inserted .em-spacer-1")).getText();
 		System.out.println(orderID.split(" ")[1].split(" ")[0]);
+		System.out.println("Its is Updated Project");
+		System.out.println("This is updated...!");
 		driver.close();		
 				//.box .ng-star-inserted .em-spacer-1
 		
